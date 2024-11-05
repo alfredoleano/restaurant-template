@@ -1,0 +1,95 @@
+/************ General Reset ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/************ Global Styles ************/
+html, body {
+    font-family: 'Anaheim', serif;
+    font-size: 16px;
+    color: #000;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3, .nav a {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/************ Navigation Bar ************/
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 45px 0px 95px;
+    background-color: aqua;
+}
+
+.logo {
+    width: 20vw;
+    max-width: 150px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav a {
+    cursor: pointer;
+}
+
+.nav a:hover {
+    color: #f3f3f3;
+}
+
+nav li::after {
+    content: ""; /* Creates an empty element */
+    position: absolute; /* Positions it relative to the <li> */
+    left: 50%; /* Centers it horizontally */
+    bottom: -5px; /* Places it just below the <li> */
+    width: 0; /* Starts with a width of 0 */
+    height: 2px; /* Height of the rectangle */
+    background-color: rgb(13, 13, 13); /* Color of the rectangle */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
+}
+
+nav li:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
